@@ -1,19 +1,11 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-    let password = generatePassword();
-    let passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 // Prompt password criteria when click generate password button
 function generatePassword() {
+    // initialize
+    let generatedPassword = "";
+
     // Let user set password length
     pwdLength = parseInt(
         prompt("How many characters would you like your password to contain?")
@@ -31,7 +23,7 @@ function generatePassword() {
         alert("Your password length is valid. Please continue!");
     }
 
-    console.log(pwdLength);
+    // console.log(pwdLength);
 
     // Let user confirm using special characters
     splChar = confirm("Click OK to confirm including special character.");
@@ -85,9 +77,6 @@ function generatePassword() {
     let values =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+0123456789abcdefghijklmnopqrstuvwxyz";
 
-    // Initialization
-    let generatedPassword = "";
-
     // create for loop to choose password characters
     for (let i = 0; i < pwdLength; i++) {
         generatedPassword += values.charAt(
@@ -97,6 +86,15 @@ function generatePassword() {
 
     alert(generatedPassword);
 
-    // add generatedPassword to textbox
-    document.getElementById("placeholder").value = generatedPassword;
+    // Write password to the #password input
+    function writePassword() {
+        let password = generatedPassword;
+        let passwordText = document.querySelector("#password");
+
+        passwordText.value = password;
+    }
+    writePassword();
 }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
