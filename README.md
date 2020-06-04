@@ -16,4 +16,4 @@ Simply speaking, a password will be generated after users click generate button 
 
 #### Demo
 
-![Password Generator Demo](Assets/Password_Generator.gif)
+![Password Generator Demo](Assets/pgDemo.gif)
