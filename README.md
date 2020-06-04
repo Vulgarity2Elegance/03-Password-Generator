@@ -13,3 +13,7 @@ Simply speaking, a password will be generated after users click generate button 
 -   Users' input should be validated and at least one character type (uppercase, lowercase, symbol, number) should be selected.
 
 -   The password is either displayed in an alert or written to the page.
+
+#### Demo
+
+![Password Generator Demo](Assets/Password_Generator.gif)
